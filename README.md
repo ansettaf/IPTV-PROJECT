@@ -345,3 +345,8 @@ Access control interface where client tokens and M3U playlists are generated and
 Real-time monitoring of internal PHP workers and the 1Gbps unmetered ingress/egress network throughput.
 ![Server Node Health](./assets/server.png)
 ![Network Traffic](./assets/trafiic.png)
+## Acknowledgements
+
+Special thanks to all developers and Amine Areche for their support and guidance in making this project possible. Your expertise and assistance have been invaluable.
+
+We also appreciate the maintainers of the underlying tools and libraries, including Nginx-RTMP, FFmpeg, Redis, MariaDB, and PHP-FPM.
