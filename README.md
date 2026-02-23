@@ -319,3 +319,29 @@ To ensure uninterrupted media delivery and mitigate third-party proxy interferen
 1. **Zero-Interference Routing:** Bypassing Cloudflare's deep packet inspection allows the 1Gbps unmetered uplink to operate at maximum efficiency.
 2. **Reduced Latency:** Direct client-to-server TCP handshakes eliminate the external proxy hop, which is critical for real-time live sports events.
 3. **Connection Stability:** Prevents forced timeouts on long-lived HTTP GET requests, which are typical of continuous IPTV client sessions.
+
+##8
+
+## 📸 System Showcase & Visual Architecture
+
+### 1. Edge Delivery & Client Portal
+The custom-branded client egress portal routed through a Split-DNS architecture to bypass standard WAF proxy limitations.
+![Novascreen Portal](./assets/novascreen.png)
+
+### 2. Authentication & Management Dashboard
+The secure backend interface providing real-time observability over system resources, including CPU idle states and memory buffer capacity.
+![Admin Login](./assets/login_dashbord.png)
+![System Dashboard](./assets/dashbord.png)
+
+### 3. Upstream Ingestion & Content Management
+The stream management layer responsible for fetching, validating, and proxying external media sources via the Nginx-RTMP engine.
+![Channel Management](./assets/chanelle.png)
+
+### 4. Subscriber Provisioning
+Access control interface where client tokens and M3U playlists are generated and injected into the MariaDB/Redis state layer.
+![User Management](./assets/add_lines.png)
+
+### 5. Infrastructure Observability & Traffic Flow
+Real-time monitoring of internal PHP workers and the 1Gbps unmetered ingress/egress network throughput.
+![Server Node Health](./assets/server.png)
+![Network Traffic](./assets/trafiic.png)
