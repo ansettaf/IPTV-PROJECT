@@ -307,3 +307,15 @@ sequenceDiagram
 
 This tree diagram represents all the major services and their roles
 within the restreaming architecture.
+### 7.3 DNS Routing & Edge Delivery (Cloudflare Bypass Strategy)
+To ensure uninterrupted media delivery and mitigate third-party proxy interference, a **Split-DNS architecture** is employed. 
+
+
+
+* **Management Interface (Protected):** The main domain used for the web dashboard and API remains protected behind a standard Web Application Firewall (WAF) to prevent credential stuffing and Layer 7 DDoS attacks.
+* **Streaming Edge Domain (`stream.novacast.live`):** A dedicated egress domain specifically configured to bypass Cloudflare's HTTP proxy (Set to "DNS-Only" mode). 
+
+**The DevOps Rationale:** Routing continuous, long-lived video streams (MPEG-TS/HLS) through standard Cloudflare proxy tiers frequently results in aggressive connection termination, buffering, and packet inspection delays. By routing the delivery traffic directly through `stream.novacast.live` to the Zomro VPS, the system achieves:
+1. **Zero-Interference Routing:** Bypassing Cloudflare's deep packet inspection allows the 1Gbps unmetered uplink to operate at maximum efficiency.
+2. **Reduced Latency:** Direct client-to-server TCP handshakes eliminate the external proxy hop, which is critical for real-time live sports events.
+3. **Connection Stability:** Prevents forced timeouts on long-lived HTTP GET requests, which are typical of continuous IPTV client sessions.
