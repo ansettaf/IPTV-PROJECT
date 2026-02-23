@@ -330,7 +330,7 @@ The custom-branded client egress portal routed through a Split-DNS architecture 
 
 ### 2. Authentication & Management Dashboard
 The secure backend interface providing real-time observability over system resources, including CPU idle states and memory buffer capacity.
-![Admin Login](./assets/login_dashbord.png)
+![Admin Login](./assets/login dashbord.png)
 ![System Dashboard](./assets/dashbord.png)
 
 ### 3. Upstream Ingestion & Content Management
