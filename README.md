@@ -347,6 +347,6 @@ Real-time monitoring of internal PHP workers and the 1Gbps unmetered ingress/egr
 ![Network Traffic](./assets/trafiic.png)
 ## Acknowledgements
 
-Special thanks to all developers and Amine Areche for their support and guidance in making this project possible. Your expertise and assistance have been invaluable.
+Special thanks to all developers and Amine Areche for their support.
 
 We also appreciate the maintainers of the underlying tools and libraries, including Nginx-RTMP, FFmpeg, Redis, MariaDB, and PHP-FPM.
